@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://r4.wallpaperflare.com/wallpaper/288/993/204/dark-forest-hd-wallpaper-2970882d318a5ddb7697780f00d1e6bd.jpg);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #8314E6;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #F05209;
+        }
+        #response {
+            margin-top: 30px;
+            text-align: center;
+        }
+        #response p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scheme Bot</h1>
+        <form action="/" method="post">
+            <label for="prompt">Enter your prompt:</label>
+            <br>
+            <input type="text" id="prompt" name="prompt" size="50">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if response %}
+        <div id="response">
+            <h2>Response:</h2>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
